@@ -198,6 +198,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6505352555763856958, guid: dbc81cf1a1fa88648b25ebf57f5cb3b9, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6505352555763856958, guid: dbc81cf1a1fa88648b25ebf57f5cb3b9, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1416261823765883475, guid: dbc81cf1a1fa88648b25ebf57f5cb3b9, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -966,6 +974,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6334933064441672346, guid: 94686156514b2d64a814aff13d1fa795, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 55aaa62313de08b4bac3dd885cf30dfb, type: 3}
     - target: {fileID: 7578881644383043286, guid: 94686156514b2d64a814aff13d1fa795, type: 3}
       propertyPath: m_Name
       value: BoxPrefab (1)
@@ -2131,6 +2143,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6505352555763856958, guid: dbc81cf1a1fa88648b25ebf57f5cb3b9, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6505352555763856958, guid: dbc81cf1a1fa88648b25ebf57f5cb3b9, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1416261823765883475, guid: dbc81cf1a1fa88648b25ebf57f5cb3b9, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -2354,6 +2374,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8485414993809753647, guid: 68088480d63081f46847b77d51dbb75b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8622403409398822901, guid: 68088480d63081f46847b77d51dbb75b, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

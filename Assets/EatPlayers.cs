@@ -8,23 +8,43 @@ public class EatPlayers : MonoBehaviour
     public TextMeshPro Eat_text;
     public int Eat = 1;
     private int q;
+
+   private AudioSource myAudioSource;
+    
+    
     void Start()
+   
+   
     {
-        q = Eat;
+        q = Eat; // присваиваем переменной текущее количество поинтов
+        myAudioSource = GetComponent<AudioSource>();
     }
 
 
     void Update()
     {
-        Eat_text.text = Eat.ToString();
+        Eat_text.text = Eat.ToString(); // выводим текст текущего количества поинтов на объекте
+        
     }
-    void OnTriggerEnter()
+   // void OnTriggerEnter()
+    //{
+   //     myAudioSource.enabled = true;
+   // }
+
+    void OnTriggerEnter () //работа с тригером
     {
-        for (int n = 0; n < q; n++)
+        
+
+        for (int n = 0; n < q; n++) // прибавляем поинты н раз
         {
-            Game.Heat ++;   
+            Game.Heat ++;
         }
-            Debug.Log($"Eat");
-        Destroy(gameObject);
+        
+
+        Debug.Log($"Eat");
+        myAudioSource.enabled = true;
+        Destroy(gameObject); // убиваем объект
+
     }
+    
 }
