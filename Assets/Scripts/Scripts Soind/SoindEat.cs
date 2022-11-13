@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class SoindEat : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    
+    public AudioSource EatsSoinds;
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider collider)
     {
-        
+        if (collider.gameObject.tag != "Player")
+        EatsSoinds.Play();
     }
 }

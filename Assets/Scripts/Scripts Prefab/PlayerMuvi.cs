@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class PlayerMuvi : MonoBehaviour
@@ -10,6 +11,9 @@ public class PlayerMuvi : MonoBehaviour
     public float horizInput;
     public static float TecSpeedPlayer;
     private float a;
+
+    
+
     void Update()
     {
 
@@ -22,7 +26,7 @@ public class PlayerMuvi : MonoBehaviour
             transform.position = new Vector3(MinVsMaxX, transform.position.y, transform.position.z);
         }
         
-        horizInput = Input.GetAxis("Horizontal"); // родключили кнопки движения по оси х
+        horizInput = Input.GetAxis("Horizontal"); // подключили кнопки движения по оси х
         transform.Translate(Vector3.right * horizInput * Time.deltaTime * SpeedPlayerRot);
         gameObject.transform.position += gameObject.transform.forward * Time.deltaTime * SpeedPlayer; //задали движение вперёд по оси Z
 
@@ -41,5 +45,8 @@ public class PlayerMuvi : MonoBehaviour
 
 
         SpeedPlayer =TecSpeedPlayer;
-}
+
+
+       
+    }
 }
