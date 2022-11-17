@@ -13,19 +13,21 @@ public class Hvost2 : MonoBehaviour
     public float Speed;
     private Transform _transform;
 
-    public UnityEvent OnEat;
+    public UnityEvent OnEat; //событие поедание еды
 
     private void Start()
     {
         _transform = GetComponent<Transform>();
+        
     }
 
     private void Update()
     {
-        MoveSnake(_transform.position + _transform.forward * Speed);
+        MoveSnake(_transform.position + _transform.forward * Speed * Time.deltaTime * 4);
 
         float angel = Input.GetAxis("Horizontal");
         _transform.Rotate(0, angel, 0);
+       
     }
 
     private void MoveSnake(Vector3 newPosition)
@@ -59,6 +61,11 @@ public class Hvost2 : MonoBehaviour
 
             var bone = Instantiate(BonePrefab);
             Tails.Add(bone.transform);
+
+            if(OnEat != null)
+            {
+                OnEat.Invoke();
+            }
         }
     }
 }

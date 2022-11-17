@@ -28,7 +28,7 @@ public class PlayerMuvi : MonoBehaviour
         
         horizInput = Input.GetAxis("Horizontal"); // подключили кнопки движения по оси х
         transform.Translate(Vector3.right * horizInput * Time.deltaTime * SpeedPlayerRot);
-        gameObject.transform.position += gameObject.transform.forward * Time.deltaTime * SpeedPlayer; //задали движение вперёд по оси Z
+        gameObject.transform.position += gameObject.transform.forward * Time.deltaTime * SpeedPlayer /2; //задали движение вперёд по оси Z
 
         TecSpeedPlayer = SpeedPlayer; // Добавляем равенство скоростей для изменения скорости
 

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CameraMuvi : MonoBehaviour
 {
+    public float SpeedPlayer;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +15,6 @@ public class CameraMuvi : MonoBehaviour
     void Update()
     {
         gameObject.transform.position += gameObject.transform.up * Time.deltaTime * PlayerMuvi.TecSpeedPlayer; // задали движение камере, со скоростью движения игрока
+        gameObject.transform.position += gameObject.transform.up * Time.deltaTime * SpeedPlayer / 2;
     }
 }
